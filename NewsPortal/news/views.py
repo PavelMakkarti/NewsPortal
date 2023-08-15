@@ -37,36 +37,36 @@ class PostDeteil(DetailView):
     context_object_name = 'new'
 
 
-class PostCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+class PostCreate(LoginRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'new_edit.html'
     raise_exception = True
 
 
-class PostUpdate(PermissionRequiredMixin, UpdateView):
+class PostUpdate(UpdateView):
     form_class = PostForm
     model = Post
     template_name = 'new_edit.html'
 
 
-class PostDelete(PermissionRequiredMixin, DeleteView):
+class PostDelete(DeleteView):
     model = Post
     template_name = 'new_delete.html'
     success_url = reverse_lazy('news.html')
 
 
-class ArticlesCreate(PermissionRequiredMixin, LoginRequiredMixin, CreateView):
+class ArticlesCreate(LoginRequiredMixin, CreateView):
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
 
-class ArticlesEdit(PermissionRequiredMixin, UpdateView):
+class ArticlesEdit(UpdateView):
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
 
-class ArticlesDelete(PermissionRequiredMixin, DeleteView):
+class ArticlesDelete(DeleteView):
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')

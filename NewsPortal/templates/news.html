@@ -41,7 +41,11 @@ News
                 <td>{{ new.title|censor }}</td>
                <td>{{ new.dataCreation|date:'d M Y' }}</td>
                <td>{{ new.text|truncatewords:20 }}</td>
-                <td>{{ new.categoryType }}</td>
+                <td>
+                    {% for neww in new.postCategory.all %}
+                        {{ news.name }}
+                    {% endfor %}
+                </td>
                <td>{{ new.rating }}</td>
                 <td>
                     {% if perms.news.change_post %}

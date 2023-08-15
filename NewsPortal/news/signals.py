@@ -27,7 +27,7 @@ def send_notifications(preview, pk, title, subscribers):
     msg.send()
 
 @receiver(m2m_changed, sender=PostCategory)
-def notify_adout_new_post(instance, sendler, **kwargs):
+def notify_adout_new_post( sendler, instance, **kwargs):
     if kwargs['action'] == 'post_add':
         categories = instance.categori.all()
         subscribers_emails = []
