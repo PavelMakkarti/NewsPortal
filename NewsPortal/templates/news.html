@@ -42,8 +42,8 @@ News
                <td>{{ new.dataCreation|date:'d M Y' }}</td>
                <td>{{ new.text|truncatewords:20 }}</td>
                 <td>
-                    {% for neww in new.postCategory.all %}
-                        {{ news.name }}
+                    {% for cat in new.postCategory.all %}
+                        {{ cat.name }}
                     {% endfor %}
                 </td>
                <td>{{ new.rating }}</td>
