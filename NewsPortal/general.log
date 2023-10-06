@@ -1,0 +1,24 @@
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2383
+Not Found: /apple-touch-icon-precomposed.png
+"GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2497
+Not Found: /favicon.ico
+Not Found: /apple-touch-icon.png
+"GET /favicon.ico HTTP/1.1" 404 2434
+"GET /apple-touch-icon.png HTTP/1.1" 404 2461
+"GET /news/ HTTP/1.1" 200 4442
+"GET /static/css/styles.css HTTP/1.1" 200 236765
+"GET /news/?page=2 HTTP/1.1" 200 4480
+"GET /news/?page=3 HTTP/1.1" 200 4783
+/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
+INFOWatching for file changes with StatReloader
+INFO/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
+2023-10-05 18:48:01,773INFOWatching for file changes with StatReloader
+2023-10-05 18:53:00,727INFO/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
+2023-10-06 08:58:38,122INFOWatching for file changes with StatReloader
+2023-10-06 08:59:57,808INFO/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
+2023-10-06 08:59:58,450INFOWatching for file changes with StatReloader
+2023-10-06 09:00:06,930INFO/Users/pavelmakkarti/PycharmProjects/News Portal Two/NewsPortal/NewsPortal/settings.py changed, reloading.
