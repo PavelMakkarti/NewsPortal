@@ -1,0 +1,44 @@
+python manage.py shell
+from New.models import *
+u1 = User.objects.create_user(username=‘Petya’)
+U2 = User.objects.create_user(username=‘Masha’)
+Author.objects.create(authorUser=‘u1’)
+Author.objects.create(authorUser=‘u2’)
+Category.objects.create(name=‘IT’)
+Category.objects.create(name=‘SPORT’)
+Category.objects.create(name=‘AUTO’)
+Category.objects.create(name=‘BUSINESS’)
+author = Author.objects.get(id=1)
+Post.objects.create(postAuthor=author, categoryType='NW', title='sometitle', text=‘samebigtext')
+Post.objects.create(postAuthor=author, categoryType='NW', title='onetitle', text=‘textonetext')
+Post.objects.create(postAuthor=author, categoryType='NW', title='newtitlee', text=‘newtextt')
+Post.objects.create(postAuthor=author, categoryType='NW', title='Test', text='test text')
+Post.objects.get(id=1).postCategory.add(Category.objects.get(id=1))
+Post.objects.get(id=1).postCategory.add(Category.objects.get(id=2))
+Post.objects.get(id=2).postCategory.add(Category.objects.get(id=1))
+Post.objects.get(id=3).postCategory.add(Category.objects.get(id=2))
+Post.objects.get(id=2).postCategory.add(Category.objects.get(id=1))
+Comment.objects.create(commentPost=Post.objects.get(id=1), commentUser=Author.objects.get(id=1).authorUser,
+text=‘anytextbaauthor’)
+Comment.objects.create(commentPost=Post.objects.get(id=1), commentUser=Author.objects.get(id=1).authorUser,
+text=‘wvaefaefba’)
+Comment.objects.create(commentPost=Post.objects.get(id=2), commentUser=Author.objects.get(id=2).authorUser,
+text=‘wvaefaefba’)
+Comment.objects.create(commentPost=Post.objects.get(id=3), commentUser=Author.objects.get(id=1).authorUser,
+text=‘anytextbaauthor’)
+Comment.objects.create(commentPost=Post.objects.get(id=4), commentUser=Author.objects.get(id=1).authorUser,
+text=‘anytextbaauthor’)
+Comment.objects.get(id=1).like()
+Comment.objects.get(id=2).like()
+Comment.objects.get(id=2).like()
+Comment.objects.get(id=3).like()
+Comment.objects.get(id=4).dislike()
+Comment.objects.get(id=1).ratingComments
+Author.objects.get(id=1)
+a = Author.objects.get(id=1)
+a.update_rating()
+a.ratingAutor
+a = Author.objects.order_dy(‘-ratingAutor’)[-1]
+For i in a:
+     i.ratingAuthor
+     i.authorUser.username

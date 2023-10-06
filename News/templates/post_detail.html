@@ -1,0 +1,14 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет products -->
+{% block title %}
+Post
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все товары -->
+{% block content %}
+<h1>{{ Post }}</h1>
+<h1>{{ Post.dataCreation|date:'d M Y' }}</h1>
+<h1>{{ Post.text|truncatewords:20 }}</h1>
+{% endblock content %}
